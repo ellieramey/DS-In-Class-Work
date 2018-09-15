@@ -21,7 +21,39 @@
   .first {
           color:red;
   }
+
+
+  body > div {
+      background-color: pink;
+      margin: 5pc;
+      border: 1px dotted red;
+  }
+
+  .placeholder {
+    background-color: rgb(200,200,255);
+    border: 2px solid rgb(50,50,100);
+  }
+
+  section {
+    border: 1 px dotted rgb(35,95,163);
+    text-align:center;
+  }
+
+  section  h2 {
+    font-size: 12pt;
+    text-transform: uppercase;
+    color: #999;
+  }
+
+  section .ban{
+    font-size: 26pt;
+    color: rgb(35,95,163);
+    text-transform: capitalize;
+    font-weight:bold;
+  }
+
 </style>
+
     <title>Project Dashboard</title>
   </head>
   <body>
@@ -33,9 +65,18 @@
                 Completion %
               </div>
 
-              <div class="col placeholder">
-                Due date & Days Remaining
-              </div>
+              <section class="col placeholder">
+                  <div class="row">
+                    <div class="col">
+                      <h2>Due Date</h2>
+                      <div class="ban">3 Nov 2018</div>
+                    </div>
+                    <div class="col">
+                      <h2>Days Remaining</h2>
+                      <div class="ban">27</div>
+                    </div>
+                  </div>
+              </section>
 
               <div class="col placeholder">
                 Status
