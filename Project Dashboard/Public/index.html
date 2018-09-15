@@ -7,52 +7,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<style type="text/css">
-  .placeholder {
-      Background-color: rgb(200,200,255);
-      border: 2px solid rgb(50, 50, 100);
-  }
+    <link rel="stylesheet" href="css/dashboard.css">
 
-  .post.first {
-        /* blah */
-      color: blue;
-  }
-
-  .first {
-          color:red;
-  }
-
-
-  body > div {
-      background-color: pink;
-      margin: 5pc;
-      border: 1px dotted red;
-  }
-
-  .placeholder {
-    background-color: rgb(200,200,255);
-    border: 2px solid rgb(50,50,100);
-  }
-
-  section {
-    border: 1 px dotted rgb(35,95,163);
-    text-align:center;
-  }
-
-  section  h2 {
-    font-size: 12pt;
-    text-transform: uppercase;
-    color: #999;
-  }
-
-  section .ban{
-    font-size: 26pt;
-    color: rgb(35,95,163);
-    text-transform: capitalize;
-    font-weight:bold;
-  }
-
-</style>
 
     <title>Project Dashboard</title>
   </head>
@@ -99,52 +55,67 @@
           </div> <!--end row 2, 3 charts -->
 
           <div class="row">
-            <table class="table table-striped table-sm">
+            <table id="taskTable" class="table table-striped table-sm">
                 <thead>
                   <tr>
-                  <th>
-                    Task
-                  </th>
-                  <th>
-                    Size
-                  </th>
-                  <th>
-                    Team Name
-                  </th>
+                  <th>&nbsp;</th>
+                  <th>Task</th>
+                  <th>Type</th>
+                  <th>Size</th>
+                  <th>Assigned Team</th>
+                  <th>Status</th>
+                  <th>Started</th>
+                  <th>Hrs</th>
+                  <th>Complete</th>
                 </tr>
                 </thead>
 
                 <tbody>
                     <tr>
-                      <td>
-                        Create a dashboard
-                      </td>
-                      <td>
-                        L
-                      </td>
-                      <td>
-                        Dancing Foxes
-                      </td>
+                      <td></td>
+                      <td>Create a dashboard</td>
+                      <td>Story</td>
+                      <td>M</td>
+                      <td>Noble Carrots</td>
+                      <td>Started</td>
+                      <td>2018-08-02</td>
+                      <td>90</td>
+                      <td>95%</td>
                     </tr>
+
                     <tr>
-                      <td>
-                        Build Charts
-                      </td>
-                      <td>
-                        M
-                      </td>
-                      <td>
-                        Walled Terrapins
-                      </td>
+                      <td></td>
+                      <td>Update unit tests</td>
+                      <td>Story</td>
+                      <td>M</td>
+                      <td>MS Why</td>
+                      <td>Closed</td>
+                      <td>2018-07-15</td>
+                      <td>40</td>
+                      <td>100%</td>
                     </tr>
+
+                    <tr>
+                      <td></td>
+                      <td>Write middleware</td>
+                      <td>Epic</td>
+                      <td>XL</td>
+                      <td>California Dream</td>
+                      <td>Open</td>
+                      <td></td>
+                      <td></td>
+                      <td>0%</td>
+                    </tr>
+
                 </tbody>
+
             </table>
           </div> <!--end row 3, tabular data -->
     </div>
-
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-
+    <script src="js/tablesort.min.js"></script>
+    <script>
+    //Tablesort plugin from http://tristen.ca/tablesort/demo/
+  new Tablesort(document.getElementById('taskTable'));
+</script>
   </body>
 </html>
